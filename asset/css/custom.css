@@ -1,27 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    background-color: rgb(243, 243, 243);
 }
 
 .navbar {
     box-shadow: rgb(0 0 0 / 27%) 0px 0px 8px 0px;
     max-width: 100vw;
+    width: 100%;
     height: 72px;
     top: 0px;
-    position: sticky;
+    position: fixed;
     z-index: 120;
     transition: top 0.5s ease 0s;
-    background-color: rgb(126 126 126 / 11%);
+    background-color: #fffbfb;
     align-items: center;
 }
 
 .login_btn {
     font-size: 18px !important;
     font-weight: 600;
-    background: #39e73a;
-    border: #139f14;
-    color: #000000;
+    color: #ffffff;
+    background: #454a4d;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 25px;
+    padding: 7px 40px;
+    border: 2px solid transparent;
+    transition: 0.4s ease;
+    box-shadow: inset 0px 0px 20px 0 rgb(22 22 22 / 72%);
+}
+
+.login_btn:hover {
+    color: #292d30;
+    border-color: #5bd85c;
+    background-color: #ffffff;
+    box-shadow: none;
 }
 
 .menu_link {
@@ -54,13 +77,14 @@
 
 .carousel-item {
     width: 100%;
-    height: 625px;
+    height: 100%;
 }
 
 .tittle_wrapper h2 {
     font-weight: 600;
     font-size: 50px;
-    margin-bottom: 80px;
+    margin-top: 60px;
+    margin-bottom: 50px;
 }
 
 .tittle_wrapper {
@@ -73,7 +97,8 @@
     left: 60px;
     padding-left: 35px;
     top: 0;
-    justify-content: flex-end;
+    justify-content: center;
+    z-index: 9;
 }
 
 .tittle_content {
@@ -85,14 +110,190 @@
 
 a.signUp_btn.btn {
     width: 235px;
-    height: 45px;
+    height: 50px;
     font-size: 20px;
     font-weight: 600;
     display: flex;
-    border-radius: 20px;
+    border-radius: 27px;
     align-items: center;
     justify-content: center;
-    color: #5bd85c;
+    color: #ffffff;
     background: #454a4d;
-    margin-bottom: 100px;
+    padding: 0 !important;
+    border: 2px solid transparent;
+    transition: 0.4s ease;
+    box-shadow: inset 0px 0px 20px 0 rgb(22 22 22 / 72%);
+}
+
+a.signUp_btn.btn:hover {
+    color: #292d30;
+    border-color: #5bd85c;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+.down-arrow {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #5bd85c;
+    transform: rotate(45deg);
+    border-left: none;
+    border-top: none;
+    margin-top: 20px;
+}
+
+.home_section {
+    height: 100vh;
+}
+
+.about-card {
+    border: 1px solid #8585851a;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    border-radius: 15px;
+    height: 280px;
+    overflow: hidden;
+    border: none !important;
+    transition: 0.6s ease-in-out;
+    max-width: 320px;
+    display: flex;
+    margin-bottom: 35px;
+}
+
+.card-body {
+    transition: 0.5s ease;
+}
+
+.card-text {
+    transition: 0.3s ease;
+    color: #727272;
+}
+
+.card-body:hover .card-text {
+    color: #44494c;
+}
+
+.card-body:hover {
+    background: #5bd85c;
+}
+
+.about-card:hover {
+    margin-top: -25px;
+}
+
+div#about {
+    margin-bottom: 120px;
+}
+
+div#contact {
+    padding-bottom: 100px;
+    background: #404f66;
+}
+
+footer {
+    background-color: #43484b;
+}
+
+.card_wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@media (min-width:780px) {
+    .resp-d-block {
+        display: flex !important;
+    }
+}
+
+
+@media (max-width:980px) {
+    .resp-d-block {
+        display: flex !important;
+    }
+    .carousel_wrapper {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .home_content {
+        flex-direction: column-reverse;
+    }
+
+    .left_right {
+        display: none !important;
+    }
+
+    .tittle_content {
+        width: 100%;
+    }
+
+    .tittle_wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0;
+        left: 0;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .tittle_wrapper h2 {
+        font-weight: 600;
+        font-size: 30px;
+        margin-top: 60px;
+        margin-bottom: 50px;
+
+    }
+
+    .about_wrapper {
+        flex-direction: column;
+    }
+
+    .menu_icon {
+        display: flex !important;
+        width: 40px;
+        height: 40px;
+    }
+    .close{
+        display: none;
+    }
+    .close_show{
+        display: block !important;
+    }
+    .menu_wrapper {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        height: 100Vh;
+        width: 80vw;
+        background: #fff;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        transition: 0.6s ease;
+    }
+
+    .menu_wrapper ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu_wrapper ul li {
+        margin: 48px 0;
+    }
+    .show{
+        left: 0 !important;
+    }
+    .logo_wrapper {
+        width: 80%;
+    }
+    .home_section {
+        height: 100%;
+    }
 }
